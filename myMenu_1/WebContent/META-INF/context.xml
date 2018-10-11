@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<Context>
+	<Resource driverClassName="org.mariadb.jdbc.Driver"
+		auth="Container"
+		InitialSize="1"
+		maxIdle="1"
+		maxWaitMillis="-1"
+		name="jdbc/localDB"
+		type="javax.sql.DataSource"
+		url="jdbc:mysql://localhost:3306/mydb"
+		username="root"
+		password="password"
+		defaultAutoCommit="false"
+	/>
+</Context>
