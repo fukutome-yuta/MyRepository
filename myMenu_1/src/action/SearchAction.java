@@ -1,3 +1,4 @@
+//menuListを検索するクラス
 package action;
 
 import java.util.List;
@@ -17,6 +18,7 @@ public class SearchAction extends Action{
 
 		HttpSession session = request.getSession();
 
+		//受け取ったキーワードからmenuListを検索しlist配列へ格納しセッション属性へ渡す
 		String keyword = request.getParameter("keyword");
 		if(keyword == null) keyword = "";
 
