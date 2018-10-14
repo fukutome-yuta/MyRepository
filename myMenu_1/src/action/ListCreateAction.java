@@ -1,3 +1,4 @@
+//買い物リストを作成するクラス
 package action;
 
 import java.util.List;
@@ -20,12 +21,15 @@ public class ListCreateAction extends Action{
 
 		MaterialDAO dao= new MaterialDAO();
 
+		//shoppintListを一旦リセット
 		dao.delete();
 
+		//セッション属性から受け取った食材リストをshoppingListへInsertする
 		for(Material m : mt) {
 			dao.insert(m);
 		}
 
+		//作成したshoppingListを取得しセッション属性へ渡す
 		List<Material> mtlist = dao.getList();
 
 		session.setAttribute("mtlist", mtlist);
