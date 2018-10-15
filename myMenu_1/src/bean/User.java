@@ -3,8 +3,8 @@ package bean;
 import java.io.Serializable;
 
 public class User implements Serializable {
-	private String id;
-	private String pass;
+	private String id;   //ユーザid
+	private String pass; //パスワード
 
 	public String getId() {
 		return id;
