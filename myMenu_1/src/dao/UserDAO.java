@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 
 import bean.User;
 
+//受けとったユーザIDとパスワードでuserListを検索し
+//取得したidとpassをUserBeanへ格納する
 public class UserDAO extends DAO {
 	public User search(String id, String pass)throws Exception{
 		User user = null;
