@@ -3,9 +3,9 @@ package bean;
 import java.io.Serializable;
 
 public class Menu implements Serializable {
-	private int id;
-	private String name;
-	private String url;
+	private int id;     //メニューを特定するためのid
+	private String name;//メニュー名
+	private String url; //レシピURL
 
 	public int getId() {
 		return id;
