@@ -14,12 +14,12 @@ public class MaterialDAO extends DAO{
 		Connection con = getConnection();
 		con.setAutoCommit(false);
 
+		//受け取ったMaterialBeanをshoppingListへinsertする
 		PreparedStatement st = con.prepareStatement("insert into shopping_list values(?, ?, ?)");
 		st.setString(1, m.getName());
 		st.setDouble(2, m.getQuantity());
 		st.setString(3, m.getData());
 		int line = st.executeUpdate();
-
 
 		if(line>0) {
 			con.commit();
@@ -33,6 +33,8 @@ public class MaterialDAO extends DAO{
 		st.close();
 		con.close();
 	}
+
+	//shoppingListを種類ごとにまとめてMaterial配列へ格納しreturn
 	public List<Material> getList()throws Exception{
 
 		List<Material> mat = new ArrayList<Material>();
@@ -52,6 +54,8 @@ public class MaterialDAO extends DAO{
 		con.close();
 		return mat;
 	}
+
+	//shoppingList内のデータをすべて削除する
 	public void delete()throws Exception{
 		Connection con = getConnection();
 		con.setAutoCommit(false);
