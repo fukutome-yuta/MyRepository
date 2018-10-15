@@ -3,9 +3,9 @@ package bean;
 import java.io.Serializable;
 
 public class Material implements Serializable {
-	private String name;
-	private double quantity;
-	private String data;
+	private String name;     //食材名
+	private double quantity; //分量
+	private String data;     //単位
 
 	public String getName() {
 		return name;
