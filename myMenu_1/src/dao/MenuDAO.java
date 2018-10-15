@@ -12,7 +12,7 @@ import bean.Menu;
 public class MenuDAO extends DAO {
 
 	List<Menu> list = new ArrayList<>();
-
+	//menuListすべてを取得しMenuBeanへ格納する
 	public List<Menu> allList() throws Exception{
 
 		Connection con = getConnection();
@@ -31,7 +31,7 @@ public class MenuDAO extends DAO {
 		con.close();
 		return list;
 	}
-
+	//受け取ったキーワードをmenuListで検索し取得する
 	public List<Menu> search(String keyword) throws Exception{
 
 		Connection con = getConnection();
@@ -51,7 +51,7 @@ public class MenuDAO extends DAO {
 		con.close();
 		return list;
 	}
-
+	//チェックリストでチェックされたメニューのIDからmenuListを検索し取得する
 	public Menu menuList(int id) throws Exception{
 
 		Connection con = getConnection();
@@ -70,6 +70,7 @@ public class MenuDAO extends DAO {
 		return menu;
 	}
 
+	//食材ごとにまとめられたshoppingListをMaterialBeanへ格納する
 	public List<Material> shoppingList(int id) throws Exception{
 
 		Connection con = getConnection();
